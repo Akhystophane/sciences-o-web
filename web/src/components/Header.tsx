@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const navItems = [
@@ -11,7 +11,8 @@ const navItems = [
 
 export default function Header() {
   const [open, setOpen] = useState(false)
-  useScrollReveal()
+  const location = useLocation()
+  useScrollReveal({ refreshKey: location.pathname })
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60">

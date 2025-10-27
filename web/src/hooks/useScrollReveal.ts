@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 type ScrollRevealOptions = {
   rootMargin?: string
   threshold?: number
+  refreshKey?: unknown
 }
 
 export function useScrollReveal(options?: ScrollRevealOptions) {
@@ -56,7 +57,7 @@ export function useScrollReveal(options?: ScrollRevealOptions) {
 
     return () => observer.disconnect()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [options?.rootMargin, options?.threshold])
+  }, [options?.rootMargin, options?.threshold, options?.refreshKey])
 }
 
 
