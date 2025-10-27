@@ -239,18 +239,18 @@ export default function Quiz() {
                       {isAnswered && (
                         <div className={`mt-4 grid gap-2 rounded-lg border px-4 py-3 text-sm ${selected === q.correctIndex ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`}>
                           {selected === q.correctIndex ? (
-                            <>
-                              <div className="text-green-700 font-semibold">
-                                ✅ Bonne réponse : {String.fromCharCode(97 + q.correctIndex)}) {q.options[q.correctIndex]}
-                              </div>
-                              <div className="text-gray-700">👉 Insight correct : {q.correctInsight}</div>
-                            </>
-                          ) : (
-                            <>
-                              <div className="text-red-700 font-semibold">❌ Si erreur : {q.wrongInsight}</div>
-                              <div className="text-gray-700">Bonne réponse : {String.fromCharCode(97 + q.correctIndex)}) {q.options[q.correctIndex]}</div>
-                            </>
-                          )}
+                          <>
+                            <div className="text-green-700 font-semibold">
+                              ✅ Bonne réponse : {String.fromCharCode(97 + q.correctIndex)}) {q.options[q.correctIndex]}
+                            </div>
+                            <div className="text-gray-700">{q.correctInsight}</div>
+                          </>
+                        ) : (
+                          <>
+                            <div className="text-red-700 font-semibold">❌ {q.wrongInsight}</div>
+                            <div className="text-gray-700">Bonne réponse : {String.fromCharCode(97 + q.correctIndex)}) {q.options[q.correctIndex]}</div>
+                          </>
+                        )}
                         </div>
                       )}
                     </article>
