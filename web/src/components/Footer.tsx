@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Footer() {
   return (
     <footer className="mt-24 border-t border-black/5 bg-white">
@@ -7,10 +9,10 @@ export default function Footer() {
           <span className="font-heading text-base font-semibold tracking-tight">Sciences Ô</span>
         </div>
         <nav className="flex items-center gap-6 text-sm text-gray-600">
-          <a href="/mentions-legales" className="hover:text-gray-900">Mentions légales</a>
+          <Link to="/mentions-legales" className="hover:text-gray-900">Mentions légales</Link>
           <a href="mailto:scienceso.outremer@gmail.com" className="hover:text-gray-900">Contact</a>
           <a href="https://www.instagram.com/sciences_o/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">
-            <img src="/instagram-icon.svg" alt="Instagram" className="w-5 h-5" />
+            <img src={`${import.meta.env.BASE_URL}instagram-icon.svg`} alt="Instagram" className="w-5 h-5" />
           </a>
         </nav>
       </div>

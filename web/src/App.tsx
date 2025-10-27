@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
+import { Link } from 'react-router-dom'
 import { Users, Network, MapPin, GraduationCap, Lightbulb, Building } from 'lucide-react'
 import { useScrollReveal } from './hooks/useScrollReveal'
 
@@ -45,18 +46,18 @@ export default function App() {
           <div className="absolute inset-y-0 left-0 right-0 mx-auto w-full max-w-[1200px] z-0">
             {/* Positions chosen to avoid overlapping CTAs */}
             {/* Left side: blue, yellow, blue */}
-            <Shape name="Martinique" src="/martinique-shape.svg" color="primary" className="top-16 left-3 w-14 h-14 sm:w-20 sm:h-20 md:w-32 md:h-32 animate-blob-float" />
-            <Shape name="Guyane" src="/guyane-shape.svg" color="accent" className="top-1/2 left-2 -translate-y-1/2 w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 animate-blob-float-slow" />
-            <Shape name="Mayotte" src="/mayotte-shape.svg" color="primary" className="bottom-8 left-6 w-14 h-14 sm:w-18 sm:h-18 md:w-24 md:h-24 animate-blob-float-delayed" />
+            <Shape name="Martinique" src={`${import.meta.env.BASE_URL}martinique-shape.svg`} color="primary" className="top-16 left-3 w-14 h-14 sm:w-20 sm:h-20 md:w-32 md:h-32 animate-blob-float" />
+            <Shape name="Guyane" src={`${import.meta.env.BASE_URL}guyane-shape.svg`} color="accent" className="top-1/2 left-2 -translate-y-1/2 w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 animate-blob-float-slow" />
+            <Shape name="Mayotte" src={`${import.meta.env.BASE_URL}mayotte-shape.svg`} color="primary" className="bottom-8 left-6 w-14 h-14 sm:w-18 sm:h-18 md:w-24 md:h-24 animate-blob-float-delayed" />
 
             {/* Right side: blue, yellow, blue */}
-            <Shape name="Guadeloupe" src="/guadeloupe-shape.svg" color="primary" className="top-16 right-4 w-16 h-16 sm:w-24 sm:h-24 md:w-40 md:h-40 animate-blob-float-delayed" />
-            <Shape name="Réunion" src="/reunion-shape.svg" color="accent" className="top-[58%] right-6 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 animate-blob-float" />
-            <Shape name="Nouvelle-Calédonie" src="/nouvelle-caledonie-shape.svg" color="primary" className="bottom-2 right-16 w-28 h-28 sm:w-40 sm:h-40 md:w-56 md:h-56 animate-blob-float-slow" />
+            <Shape name="Guadeloupe" src={`${import.meta.env.BASE_URL}guadeloupe-shape.svg`} color="primary" className="top-16 right-4 w-16 h-16 sm:w-24 sm:h-24 md:w-40 md:h-40 animate-blob-float-delayed" />
+            <Shape name="Réunion" src={`${import.meta.env.BASE_URL}reunion-shape.svg`} color="accent" className="top-[58%] right-6 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 animate-blob-float" />
+            <Shape name="Nouvelle-Calédonie" src={`${import.meta.env.BASE_URL}nouvelle-caledonie-shape.svg`} color="primary" className="bottom-2 right-16 w-28 h-28 sm:w-40 sm:h-40 md:w-56 md:h-56 animate-blob-float-slow" />
 
             {/* Center shapes overlapping the hero title */}
-            <Shape name="Saint-Martin & Saint-Barthélemy" src="/saint-martin-shape.svg" color="accent" className="top-10 md:top-12 left-[42%] w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 animate-blob-float" />
-            <Shape name="Saint-Pierre et Miquelon" src="/saint-pierre-miquelon-shape.svg" color="primary" className="top-40 md:top-44 left-[58%] w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 animate-blob-float-delayed" />
+            <Shape name="Saint-Martin & Saint-Barthélemy" src={`${import.meta.env.BASE_URL}saint-martin-shape.svg`} color="accent" className="top-10 md:top-12 left-[42%] w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 animate-blob-float" />
+            <Shape name="Saint-Pierre et Miquelon" src={`${import.meta.env.BASE_URL}saint-pierre-miquelon-shape.svg`} color="primary" className="top-40 md:top-44 left-[58%] w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 animate-blob-float-delayed" />
           </div>
           {/* Clean Hero Background - No particles */}
 
@@ -68,7 +69,7 @@ export default function App() {
               {/* Inline hero illustration under title */}
               <div className="mx-auto mb-6 flex justify-center">
                 <img
-                  src="/animated-levitating-illustration-fixed.svg"
+                  src={`${import.meta.env.BASE_URL}animated-levitating-illustration-fixed.svg`}
                   alt="Illustration"
                   className="w-[260px] sm:w-[360px] md:w-[460px] lg:w-[520px] max-w-full h-auto opacity-90"
                 />
@@ -99,7 +100,7 @@ export default function App() {
                     Rejoindre Sciences Ô
                   </span>
                 </a>
-                <a href="/quiz" className="btn-primary text-lg px-10 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold">
+                <Link to="/quiz" className="btn-primary text-lg px-10 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold">
                   <span className="flex items-center gap-3">
                     <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
@@ -109,7 +110,7 @@ export default function App() {
                     </svg>
                     Semaine du Climat · Quiz
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
