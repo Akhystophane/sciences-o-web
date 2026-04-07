@@ -4,9 +4,9 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const navItems = [
   { label: 'Accueil', to: '/' },
-  { label: 'Nos Actions', to: '/#actions' },
-  { label: 'Événements', to: '/quiz' },
-  { label: 'À propos', to: '/#about' },
+  { label: 'SOM 2026', to: '/semaine-outremer' },
+  { label: 'Ressources', to: '/ressources' },
+  { label: 'À propos', to: '/a-propos' },
 ]
 
 export default function Header() {
@@ -18,9 +18,12 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       
       <div className="container-page flex items-center justify-between py-4 md:py-5 relative z-10">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold">Ô</span>
-          <span className="font-heading text-lg font-semibold tracking-tight text-primary">Sciences Ô</span>
+        <Link to="/" className="flex items-center">
+          <img
+            src={`${import.meta.env.BASE_URL}logo-sciences-o.png`}
+            alt="Sciences Ô"
+            className="h-10 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
