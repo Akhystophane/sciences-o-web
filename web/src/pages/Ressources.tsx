@@ -19,7 +19,7 @@ const newsletters: Document[] = [
     description:
       'Signature du partenariat avec la CARL (Riviera du Levant), ouverture de l\'année associative et perspectives pour 2025-2026 sous la co-présidence de Maëva Cadéroly et Philippe Legrix.',
     year: '2025-2026',
-    href: `newsletter-sciences-o-25-26.pdf`,
+    href: `https://sciences-o-assets.s3.eu-west-3.amazonaws.com/newsletter-sciences-o-25-26.pdf`,
     accent: 'primary',
   },
   {
@@ -28,7 +28,7 @@ const newsletters: Document[] = [
     description:
       'Retour sur les actions de l\'année : Sommet Lakou, exposition Taïnos et Kalinagos, table ronde "Héritages pluriels des JO", partenariats institutionnels, 53 lycéens accompagnés et plus de 100 membres.',
     year: '2024-2025',
-    href: `newsletter-sciences-o-24-25.pdf`,
+    href: `https://sciences-o-assets.s3.eu-west-3.amazonaws.com/newsletter-sciences-o-24-25.pdf`,
     accent: 'accent',
   },
 ]
@@ -86,7 +86,7 @@ function DocumentCard({ doc }: { doc: Document }) {
 
           {/* Bouton télécharger */}
           <a
-            href={`${import.meta.env.BASE_URL}${doc.href}`}
+            href={doc.href}
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 ${

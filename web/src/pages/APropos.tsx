@@ -171,7 +171,7 @@ export default function APropos() {
                     </a>
                   </div>
                   <a
-                    href={`${import.meta.env.BASE_URL}livret-sciences-o-2025-2026.pdf`}
+                    href="https://sciences-o-assets.s3.eu-west-3.amazonaws.com/livret-sciences-o-2025-2026.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 btn-primary px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-lg"

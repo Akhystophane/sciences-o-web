@@ -277,7 +277,7 @@ export default function App() {
             {/* Newsletter */}
             <div className="max-w-4xl mx-auto mt-8 flex justify-center" data-reveal-children>
               <a
-                href={`${import.meta.env.BASE_URL}newsletter-sciences-o-25-26.pdf`}
+                href="https://sciences-o-assets.s3.eu-west-3.amazonaws.com/newsletter-sciences-o-25-26.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-white/90 border border-primary/20 hover:border-primary/40 hover:shadow-lg text-primary font-semibold px-6 py-3 rounded-full shadow transition-all duration-300 hover:-translate-y-0.5"
