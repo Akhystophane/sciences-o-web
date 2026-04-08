@@ -14,7 +14,7 @@ export default function Jeudi() {
       time: '12h30–14h30',
       description: 'Projection de courts-métrages ultramarins suivie d\'un repas et d\'un échange. Un moment pour voir, écouter et débattre autour de regards filmés sur les Outre-mer.',
       status: 'inscription' as const,
-      registrationUrl: 'https://www.helloasso.com/associations/sciences-o'
+      registrationUrl: 'https://docs.google.com/forms/d/1R0sM0dgde6PGwGtREQNvFvZOu0it1lQskAnc4KAvnQY/viewform'
     },
     {
       title: 'Exposition photographique',

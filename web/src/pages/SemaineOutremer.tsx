@@ -79,8 +79,8 @@ export default function SemaineOutremer() {
               </p>
 
               <p className="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed" data-reveal>
-                Une semaine dédiée à la mise en lumière de nos cultures, de nos défis et de nos talents.
-                Conférences, débats, expositions et rencontres pour mieux comprendre les enjeux d'Outre-mer.
+                Une semaine pour explorer les réalités, les cultures et les enjeux des territoires ultramarins.
+                Conférences, débats, expositions et rencontres au croisement de l'histoire, du politique et du vivant.
               </p>
             </div>
           </div>
