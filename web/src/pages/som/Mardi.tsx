@@ -46,10 +46,11 @@ export default function Mardi() {
       status: 'probable' as const
     },
     {
-      title: 'Atelier tatouage polynésien',
-      time: '19h–21h (deux créneaux)',
-      description: 'Initiation au tatouage polynésien accompagnée d\'un éclairage socio-anthropologique sur les symboliques et les héritages de cette pratique. Sur inscription, places limitées.',
-      status: 'probable' as const
+      title: 'Atelier tatouage polynésien & initiation au ukulélé',
+      time: '19h–21h',
+      description: 'Immersion dans deux formes d\'expression artistique et culturelle des territoires du Pacifique : tatouage polynésien, pratique ancestrale porteuse d\'identité et de mémoire, puis initiation au ukulélé pour passer un moment ludique.',
+      status: 'inscription' as const,
+      registrationUrl: 'https://docs.google.com/forms/d/1X37Vu0KEZwh1okm9d6yzpD6hFqj6_159FqJ_hv8pAfU/viewform'
     }
   ]
 
