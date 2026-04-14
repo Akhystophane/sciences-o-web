@@ -10,22 +10,22 @@ export default function Mercredi() {
 
   const events = [
     {
-      title: 'Village des créateurs — Mode, textile et bijoux',
-      time: '12h15–14h45',
-      description: 'Stands de créateurs et créatrices autour de la mode, du textile et des bijoux inspirés des identités ultramarines. Plusieurs exposants au rendez-vous.',
-      status: 'probable' as const
+      title: 'Danse traditionnelle Soamako',
+      time: '12h15–12h45',
+      description: 'Performance mettant en valeur le patrimoine de Wallis-et-Futuna (Uvea mo Futuna).',
+      status: 'libre' as const
     },
     {
-      title: 'Performance de danse traditionnelle',
-      time: 'Vers 12h15–13h',
-      description: 'Performance de danse traditionnelle mettant en valeur un patrimoine ultramarin, dans le cadre du village des créateurs.',
-      status: 'probable' as const
+      title: 'Stands de 6 créateurs et professionnels de la couture',
+      time: '12h–17h',
+      description: 'Présentation de créations textiles inspirées des identités ultramarines.',
+      status: 'libre' as const
     },
     {
-      title: 'Conférence — La musique comme miroir social',
-      time: 'Horaire à confirmer',
-      description: 'Une discussion autour des représentations, des héritages et des réappropriations dans les musiques ultramarines et caribéennes. Avec des artistes et un regard académique.',
-      status: 'probable' as const
+      title: 'Conférence — Esclavage, mémoire et reconnaissance international',
+      time: '19h–21h',
+      description: 'Comprendre l\'initiative historique du Ghana aux Nations Unies. Une conférence au croisement de l\'histoire, du droit international et de la mémoire collective.',
+      status: 'libre' as const
     }
   ]
 
@@ -47,13 +47,14 @@ export default function Mercredi() {
             </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-4">
-              Valorisation artistique
+              De l'héritage à la reconnaissance
             </h1>
 
             <div className="h-1 w-24 bg-accent rounded-full mb-6"></div>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Une journée centrée sur la création, la mode, la performance et les représentations artistiques des Outre-mer.
+              Une journée entre danse traditionnelle, création textile et réflexion sur la mémoire de l'esclavage
+              et la reconnaissance internationale.
             </p>
           </div>
 
@@ -69,11 +70,11 @@ export default function Mercredi() {
           <div className="max-w-4xl mx-auto">
             <DayNavigation
               previousDay={{
-                label: 'Mardi - Dialogue des héritages culturels',
+                label: 'Mardi - Les Outre-Mer par tous les sens',
                 url: '/semaine-outremer/mardi'
               }}
               nextDay={{
-                label: 'Jeudi - Regards croisés sur les réalités ultramarines',
+                label: 'Jeudi - Les territoires d\'Outre-mer et la République',
                 url: '/semaine-outremer/jeudi'
               }}
             />

@@ -1,5 +1,6 @@
 import StatusBadge from './StatusBadge'
 import { Clock, MapPin, ExternalLink } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 interface EventCardProps {
   title: string
@@ -8,6 +9,8 @@ interface EventCardProps {
   description: string
   status: 'libre' | 'inscription' | 'probable' | 'confirmer'
   registrationUrl?: string
+  actionUrl?: string
+  actionLabel?: string
 }
 
 export default function EventCard({
@@ -16,8 +19,13 @@ export default function EventCard({
   location,
   description,
   status,
-  registrationUrl
+  registrationUrl,
+  actionUrl,
+  actionLabel
 }: EventCardProps) {
+  const navigate = useNavigate()
+  const isExternalAction = actionUrl?.startsWith('http')
+
   return (
     <div className="group relative bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-primary/15 transition-all duration-300 hover:shadow-xl hover:bg-white/95 hover:border-primary/25 hover:-translate-y-1">
       <div className="flex items-start justify-between gap-4 mb-3">
@@ -50,6 +58,28 @@ export default function EventCard({
           S'inscrire
           <ExternalLink className="w-4 h-4" />
         </a>
+      )}
+
+      {actionUrl && actionLabel && (
+        isExternalAction ? (
+          <a
+            href={actionUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-primary/20 px-4 py-2 text-sm font-semibold text-primary transition-all duration-300 hover:border-primary/35 hover:bg-primary/5"
+          >
+            {actionLabel}
+            <ExternalLink className="w-4 h-4" />
+          </a>
+        ) : (
+          <button
+            type="button"
+            onClick={() => navigate(actionUrl)}
+            className="inline-flex items-center gap-2 rounded-full border border-primary/20 px-4 py-2 text-sm font-semibold text-primary transition-all duration-300 hover:border-primary/35 hover:bg-primary/5"
+          >
+            {actionLabel}
+          </button>
+        )
       )}
     </div>
   )

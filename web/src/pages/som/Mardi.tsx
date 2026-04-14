@@ -12,43 +12,33 @@ export default function Mardi() {
     {
       title: 'Exposition-vente artisanale',
       time: 'Toute la journée',
-      description: 'Cartes, créations artisanales, textiles, bijoux et objets inspirés des Outre-mer. Un marché pour découvrir et soutenir les créateurs ultramarins.',
+      description: 'Cartes postales et créations artisanales inspirées des Outre-mer.',
       status: 'libre' as const
     },
     {
-      title: 'Quiz interactif — Déconstruisons nos clichés',
+      title: 'Quizz interactif — Déconstruisons nos clichés',
       time: 'Toute la journée',
       description: 'Dispositif ludique de sensibilisation autour des représentations des Outre-mer. À tester en solo ou à plusieurs !',
-      status: 'libre' as const
+      status: 'libre' as const,
+      actionUrl: '/quiz-outremer',
+      actionLabel: 'Faire le quizz'
     },
     {
-      title: 'Masterclass rhum & marché culinaire',
-      time: '12h15–17h',
-      description: 'Une séquence mêlant marché culinaire et temps de découverte autour du rhum. L\'occasion de goûter et d\'apprendre sur les savoir-faire ultramarins.',
-      status: 'probable' as const
-    },
-    {
-      title: 'Atelier maré tèt',
+      title: 'Atelier culinaire, masterclass rhum & marché culinaire',
       time: '14h45–16h45',
-      description: 'Transmission d\'un savoir-faire traditionnel dans un format participatif. Venez apprendre et partager autour de cette pratique culturelle.',
-      status: 'probable' as const
+      description: 'Cours de cuisine sur des spécialités ultramarines, masterclass sur le rhum et accueil d\'un marché culinaire ultramarin regroupant 4 stands.',
+      status: 'inscription' as const
     },
     {
-      title: 'Atelier culinaire',
-      time: 'Horaire à confirmer',
-      description: 'Cours de cuisine autour de spécialités ultramarines. Détails à venir.',
-      status: 'confirmer' as const
-    },
-    {
-      title: 'Prestation musicale — Otantika',
-      time: '16h45–17h',
-      description: 'Intermède musical dans le cadre de la journée culturelle.',
-      status: 'probable' as const
+      title: 'Cours de Gwoka — Otantika',
+      time: '17h00–17h30',
+      description: 'Initiation au Gwoka dispensée par Otantika, danse et musique traditionnelles de la Guadeloupe.',
+      status: 'libre' as const
     },
     {
       title: 'Atelier tatouage polynésien & initiation au ukulélé',
-      time: '19h–21h',
-      description: 'Immersion dans deux formes d\'expression artistique et culturelle des territoires du Pacifique : tatouage polynésien, pratique ancestrale porteuse d\'identité et de mémoire, puis initiation au ukulélé pour passer un moment ludique.',
+      time: '19h15–21h15',
+      description: 'Initiation accompagnée d\'un éclairage socio-anthropologique sur les symboliques culturelles du tatouage polynésien, pratique ancestrale porteuse d\'identité et de mémoire, puis initiation au ukulélé.',
       status: 'inscription' as const,
       registrationUrl: 'https://docs.google.com/forms/d/1X37Vu0KEZwh1okm9d6yzpD6hFqj6_159FqJ_hv8pAfU/viewform'
     }
@@ -72,14 +62,14 @@ export default function Mardi() {
             </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-4">
-              Dialogue des héritages culturels
+              Les « Outre-Mer » par tous les sens
             </h1>
 
             <div className="h-1 w-24 bg-accent rounded-full mb-6"></div>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Une journée autour des savoir-faire, des goûts, des pratiques culturelles et de la transmission,
-              avec un marché, des ateliers et des formats participatifs.
+              Le « Tout-Monde » à portée de main : une journée autour des saveurs, des savoir-faire,
+              des pratiques culturelles et de la transmission, avec un marché, des ateliers et des formats participatifs.
             </p>
           </div>
 
@@ -95,11 +85,11 @@ export default function Mardi() {
           <div className="max-w-4xl mx-auto">
             <DayNavigation
               previousDay={{
-                label: 'Lundi - Mémoire, reconnaissance',
+                label: 'Lundi - Racines vives',
                 url: '/semaine-outremer/lundi'
               }}
               nextDay={{
-                label: 'Mercredi - Valorisation artistique',
+                label: 'Mercredi - De l\'héritage à la reconnaissance',
                 url: '/semaine-outremer/mercredi'
               }}
             />

@@ -13,12 +13,14 @@ import Mardi from './pages/som/Mardi.tsx'
 import Mercredi from './pages/som/Mercredi.tsx'
 import Jeudi from './pages/som/Jeudi.tsx'
 import Vendredi from './pages/som/Vendredi.tsx'
+import QuizTransversal from './pages/QuizTransversal.tsx'
 
 const router = createBrowserRouter([
   { path: '/', element: <App /> },
   { path: '/a-propos', element: <APropos /> },
   { path: '/ressources', element: <Ressources /> },
   { path: '/quiz', element: <Quiz /> },
+  { path: '/quiz-outremer', element: <QuizTransversal /> },
   { path: '/mentions-legales', element: <MentionsLegales /> },
   { path: '/semaine-outremer', element: <SemaineOutremer /> },
   { path: '/semaine-outremer/lundi', element: <Lundi /> },

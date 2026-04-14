@@ -16,16 +16,23 @@ export default function Lundi() {
       status: 'libre' as const
     },
     {
-      title: 'Atelier linguistique',
-      time: 'Horaire à confirmer',
-      description: 'Initiation aux langues ultramarines : créole réunionnais, shimaoré, nengone et autres langues des territoires d\'Outre-mer. Un moment d\'ouverture linguistique et culturelle.',
-      status: 'probable' as const
+      title: 'Prestation musicale — Origin Kayamb, Maloya',
+      time: '12h15–12h40',
+      description: 'Un moment musical pour ouvrir la journée aux rythmes de La Réunion, entre tradition et énergie du Maloya.',
+      status: 'libre' as const
+    },
+    {
+      title: 'Atelier linguistique — Cours de créole',
+      time: '14h45–16h45',
+      description: 'Cours de créole dispensé par Samuel FEREOL. Un moment d\'ouverture linguistique et culturelle pour découvrir une langue vivante des Outre-mer.',
+      status: 'libre' as const
     },
     {
       title: 'Afterwork d\'ouverture',
-      time: 'Soirée',
-      description: 'Moment d\'ouverture de la semaine et de rencontre dans un cadre convivial. L\'occasion de lancer la semaine ensemble.',
-      status: 'libre' as const
+      time: '19h–22h',
+      description: 'Moment officiel de présentation de notre marraine Me Vanessa BOUSARDO, suivi d\'un temps de networking entre alumni et étudiants.',
+      status: 'inscription' as const,
+      registrationUrl: 'https://docs.google.com/forms/d/1dV7ia5JdSSuj-LJ6ipSBMqTvF6J6F-iTaL10lVGNf-c'
     }
   ]
 
@@ -47,14 +54,14 @@ export default function Lundi() {
             </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-4">
-              Mémoire, reconnaissance
+              Racines vives : Mémoire, langue et transmission
             </h1>
 
             <div className="h-1 w-24 bg-accent rounded-full mb-6"></div>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Une journée d'ouverture consacrée aux figures, aux héritages et aux langues des Outre-mer,
-              entre transmission, visibilité historique et ouverture de la semaine.
+              Une journée d'ouverture consacrée aux figures historiques, aux héritages linguistiques et aux
+              expressions musicales des Outre-mer, entre mémoire, transmission et lancement de la semaine.
             </p>
           </div>
 
@@ -70,7 +77,7 @@ export default function Lundi() {
           <div className="max-w-4xl mx-auto">
             <DayNavigation
               nextDay={{
-                label: 'Mardi - Dialogue des héritages culturels',
+                label: 'Mardi - Les Outre-Mer par tous les sens',
                 url: '/semaine-outremer/mardi'
               }}
             />

@@ -12,27 +12,33 @@ export default function Jeudi() {
     {
       title: 'Ciné-lunch',
       time: '12h30–14h30',
-      description: 'Projection de courts-métrages ultramarins suivie d\'un repas et d\'un échange. Un moment pour voir, écouter et débattre autour de regards filmés sur les Outre-mer.',
+      description: 'Projection de courts-métrages ultramarins suivie d\'un repas. Un moment pour voir, écouter et échanger autour de regards filmés sur les Outre-mer — événement sur inscription.',
       status: 'inscription' as const,
       registrationUrl: 'https://docs.google.com/forms/d/1R0sM0dgde6PGwGtREQNvFvZOu0it1lQskAnc4KAvnQY/viewform'
     },
     {
-      title: 'Exposition photographique',
-      time: 'Après-midi',
-      description: 'Exposition consacrée à des regards photographiques sur les Outre-mer et les diasporas.',
-      status: 'probable' as const
+      title: 'Prestation musicale — Ori Nesia',
+      time: '14h30–14h45',
+      description: 'Intermède musical aux sonorités polynésiennes.',
+      status: 'libre' as const
+    },
+    {
+      title: 'Exposition photographique — Minorités invisibilisées',
+      time: 'Toute la journée',
+      description: 'Travaux photographiques sur les minorités invisibilisées des Outre-mer et des diasporas.',
+      status: 'libre' as const
     },
     {
       title: 'Espace documentaire & quiz',
       time: 'Toute la journée',
-      description: 'Espace documentaire sur plusieurs thématiques sociétales des Outre-mer, accompagné d\'un quiz pédagogique pour approfondir ses connaissances.',
-      status: 'probable' as const
+      description: 'Espace documentaire sur plusieurs thématiques sociétales des Outre-mer (enfants de la Creuse, engagisme, etc.), accompagné d\'un quiz pédagogique.',
+      status: 'libre' as const
     },
     {
-      title: 'Prestation musicale — Les Zamourettes',
-      time: '19h15–19h30',
-      description: 'Séquence musicale de clôture de journée.',
-      status: 'probable' as const
+      title: 'Conférence — 80 ans de départementalisation, et après ?',
+      time: '19h00–21h15',
+      description: 'L\'accès aux droits dans les Outre-mer entre promesse républicaine et réalités vécues. Une réflexion sur les enjeux contemporains de la départementalisation.',
+      status: 'libre' as const
     }
   ]
 
@@ -54,14 +60,14 @@ export default function Jeudi() {
             </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-4">
-              Regards croisés sur les réalités ultramarines
+              Les territoires dits d’« Outre-mer » et la République
             </h1>
 
             <div className="h-1 w-24 bg-accent rounded-full mb-6"></div>
 
             <p className="text-lg text-gray-700 leading-relaxed">
               Une journée de réflexion, d'images et de documentation autour des réalités sociales,
-              historiques et politiques des Outre-mer.
+              historiques et politiques des Outre-mer face à la promesse républicaine.
             </p>
           </div>
 
@@ -77,11 +83,11 @@ export default function Jeudi() {
           <div className="max-w-4xl mx-auto">
             <DayNavigation
               previousDay={{
-                label: 'Mercredi - Valorisation artistique',
+                label: 'Mercredi - De l\'héritage à la reconnaissance',
                 url: '/semaine-outremer/mercredi'
               }}
               nextDay={{
-                label: 'Vendredi - Entre créations, musique et artisanat',
+                label: 'Vendredi - Vie chère, regards ultramarins',
                 url: '/semaine-outremer/vendredi'
               }}
             />

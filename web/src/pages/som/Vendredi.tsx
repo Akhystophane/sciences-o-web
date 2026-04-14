@@ -10,16 +10,16 @@ export default function Vendredi() {
 
   const events = [
     {
-      title: 'Performance musicale',
-      time: '18h30',
-      description: 'Performance musicale en ouverture de la soirée de clôture.',
-      status: 'confirmer' as const
+      title: 'Performance musicale — Chants Logan Lelevai',
+      time: '12h15–12h45',
+      description: 'Interprétation de chants polynésiens par le chanteur Logan Lelevai.',
+      status: 'libre' as const
     },
     {
-      title: 'Grande conférence — La vie chère',
+      title: 'Les assises des étudiants sur la vie chère en Outre-mer',
       time: '19h–21h',
-      description: 'Conférence consacrée à la vie chère et aux enjeux économiques et sociaux dans les Outre-mer. L\'un des temps forts intellectuels de la semaine, pour mettre des mots sur des réalités trop souvent invisibilisées.',
-      status: 'probable' as const
+      description: 'Conférence de clôture consacrée à la vie chère et aux enjeux économiques et sociaux dans les Outre-mer. L\'un des temps forts intellectuels de la semaine, pour mettre des mots sur des réalités trop souvent invisibilisées.',
+      status: 'libre' as const
     }
   ]
 
@@ -41,19 +41,20 @@ export default function Vendredi() {
             </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-4">
-              Entre créations, musique et artisanat
+              Vie chère — Regards sur les réalités ultramarines
             </h1>
 
             <div className="h-1 w-24 bg-accent rounded-full mb-6"></div>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Une soirée de clôture entre discussion, expressions artistiques et mise en valeur d'acteurs ultramarins.
+              Une journée de clôture entre musique polynésienne et réflexion sur la vie chère,
+              pour mettre en lumière les réalités économiques et sociales des Outre-mer.
             </p>
           </div>
 
           {/* Events */}
           <div className="max-w-4xl mx-auto space-y-6 mb-12" data-reveal-children>
-            <h2 className="font-heading text-2xl font-bold text-primary mb-6">Programme de la soirée</h2>
+            <h2 className="font-heading text-2xl font-bold text-primary mb-6">Programme de la journée</h2>
             {events.map((event, index) => (
               <EventCard key={index} {...event} />
             ))}
@@ -63,7 +64,7 @@ export default function Vendredi() {
           <div className="max-w-4xl mx-auto">
             <DayNavigation
               previousDay={{
-                label: 'Jeudi - Regards croisés sur les réalités ultramarines',
+                label: 'Jeudi - Les territoires d\'Outre-mer et la République',
                 url: '/semaine-outremer/jeudi'
               }}
             />

@@ -11,23 +11,23 @@ export default function SemaineOutremer() {
     {
       day: 'Lundi',
       date: '13 avril 2026',
-      theme: 'Mémoire, reconnaissance',
-      eventCount: 3,
+      theme: 'Racines vives : Mémoire, langue et transmission',
+      eventCount: 4,
       color: 'primary' as const,
       url: '/semaine-outremer/lundi'
     },
     {
       day: 'Mardi',
       date: '14 avril 2026',
-      theme: 'Dialogue des héritages culturels',
-      eventCount: 7,
+      theme: 'Les « Outre-Mer » par tous les sens : Le « Tout-Monde » à portée de main',
+      eventCount: 5,
       color: 'accent' as const,
       url: '/semaine-outremer/mardi'
     },
     {
       day: 'Mercredi',
       date: '15 avril 2026',
-      theme: 'Valorisation artistique',
+      theme: 'De l\'héritage à la reconnaissance',
       eventCount: 3,
       color: 'primary' as const,
       url: '/semaine-outremer/mercredi'
@@ -35,15 +35,15 @@ export default function SemaineOutremer() {
     {
       day: 'Jeudi',
       date: '16 avril 2026',
-      theme: 'Regards croisés sur les réalités ultramarines',
-      eventCount: 4,
+      theme: 'Les territoires dits d’« Outre-mer » et la République',
+      eventCount: 5,
       color: 'accent' as const,
       url: '/semaine-outremer/jeudi'
     },
     {
       day: 'Vendredi',
       date: '17 avril 2026',
-      theme: 'Entre créations, musique et artisanat',
+      theme: 'Vie chère — Regards sur les réalités ultramarines',
       eventCount: 2,
       color: 'primary' as const,
       url: '/semaine-outremer/vendredi'
