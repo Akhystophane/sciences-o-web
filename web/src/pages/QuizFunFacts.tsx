@@ -23,8 +23,8 @@ const questions: Question[] = [
     options: ['Piton de la Fournaise', 'Piton des Neiges', 'Maido', 'Grand Benare'],
     correctIndex: 1,
     correctInsight:
-      'Exact. Le Piton des Neiges culmine a 3 070 m. Le Piton de la Fournaise est le volcan actif le plus celebre, mais ce n’est pas le sommet le plus haut.',
-    wrongInsight: 'La bonne reponse etait le Piton des Neiges, point culminant de La Reunion.',
+      "Le Piton des Neiges culmine à 3 070 mètres et reste le sommet le plus élevé de La Réunion. Le Piton de la Fournaise est beaucoup plus célèbre car il est actif, mais ce n'est pas lui le point culminant.",
+    wrongInsight: "Le Piton des Neiges est le sommet le plus haut de l'île ; le Piton de la Fournaise est surtout le volcan le plus connu.",
   },
   {
     id: 2,
@@ -38,8 +38,8 @@ const questions: Question[] = [
     ],
     correctIndex: 1,
     correctInsight:
-      'Oui. Les pitons, cirques et remparts de La Reunion sont inscrits a l’UNESCO et couvrent une part tres importante de l’ile.',
-    wrongInsight: 'La bonne reponse etait les pitons, cirques et remparts.',
+      "Les pitons, cirques et remparts de La Réunion sont inscrits au patrimoine mondial de l'UNESCO. Cet ensemble montagneux spectaculaire est l'un des grands marqueurs paysagers et identitaires de l'île.",
+    wrongInsight: "L'inscription UNESCO concerne les pitons, cirques et remparts, pas les lagons ou les seules plages volcaniques.",
   },
   {
     id: 3,
@@ -48,23 +48,23 @@ const questions: Question[] = [
     options: ['La Soufriere', 'La montagne Pelee', 'Le mont Orohena', 'Le Piton des Neiges'],
     correctIndex: 1,
     correctInsight:
-      'C’est bien la montagne Pelee qui detruit Saint-Pierre en 1902, ce qui vaut encore a la ville le surnom de Pompéi des Caraibes.',
-    wrongInsight: 'La bonne reponse etait la montagne Pelee.',
+      "La montagne Pelée détruit Saint-Pierre en 1902 lors d'une éruption majeure. Cet épisode a profondément marqué l'histoire de la Martinique, au point que la ville est souvent surnommée la 'Pompéi des Caraïbes'.",
+    wrongInsight: "C'est la montagne Pelée, en Martinique, qui est responsable de la destruction de Saint-Pierre en 1902.",
   },
   {
     id: 4,
     type: 'mcq',
-    prompt: 'Pourquoi la Guadeloupe est-elle souvent representee comme un papillon ?',
+    prompt: 'Quel fun fact visuel explique pourquoi la Guadeloupe est souvent representee comme un papillon ?',
     options: [
-      'A cause de ses recifs',
-      'Parce qu’elle est formee autour de Grande-Terre et Basse-Terre',
-      'Parce qu’elle compte deux volcans',
-      'A cause de ses ailes migratoires d’oiseaux',
+      'Sa forme generale evoque un papillon',
+      'Elle est formee autour de Grande-Terre et Basse-Terre',
+      'Elle compte deux volcans actifs',
+      'Ses oiseaux migrateurs dessinent deux ailes',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     correctInsight:
-      'Oui. La forme de papillon vient des deux iles principales, Grande-Terre et Basse-Terre, separees par la Riviere Salee.',
-    wrongInsight: 'La bonne reponse etait Grande-Terre et Basse-Terre.',
+      "Oui. Le fun fact à retenir, c'est que la forme générale de la Guadeloupe évoque un papillon. Cette image vient de ses deux grandes parties, Grande-Terre et Basse-Terre, séparées par la Rivière Salée.",
+    wrongInsight: "Le 'papillon' guadeloupéen renvoie à la forme dessinée par Grande-Terre et Basse-Terre.",
   },
   {
     id: 5,
@@ -73,8 +73,8 @@ const questions: Question[] = [
     options: ['Cayenne', 'Kourou', 'Saint-Laurent-du-Maroni', 'Remire-Montjoly'],
     correctIndex: 1,
     correctInsight:
-      'Exact. Le Centre spatial guyanais est implante a Kourou. C’est de la que l’Europe effectue ses lancements spatiaux depuis la Guyane.',
-    wrongInsight: 'La bonne reponse etait Kourou.',
+      "Le Centre spatial guyanais est implanté à Kourou. C'est depuis ce site que sont réalisés les grands lancements spatiaux européens en Guyane.",
+    wrongInsight: "Le Centre spatial guyanais se trouve à Kourou, pas à Cayenne.",
   },
   {
     id: 6,
@@ -83,8 +83,8 @@ const questions: Question[] = [
     options: ['10 %', '25 %', '40 %', '60 %'],
     correctIndex: 2,
     correctInsight:
-      'Oui. Le Parc amazonien couvre environ 40 % de la Guyane, ce qui donne tout de suite l’echelle du territoire.',
-    wrongInsight: 'La bonne reponse etait environ 40 %.',
+      "Le Parc amazonien de Guyane couvre environ 40 % du territoire. Ce chiffre permet de mesurer à quel point la Guyane est vaste et dominée par l'espace forestier.",
+    wrongInsight: "On retient généralement qu'environ 40 % du territoire guyanais est couvert par le Parc amazonien.",
   },
   {
     id: 7,
@@ -94,8 +94,8 @@ const questions: Question[] = [
     options: ['Accord de Matignon', 'Accord de Noumea', 'Accord de Papeete', 'Accord de Wallis'],
     correctIndex: 1,
     correctInsight:
-      'Exact. L’accord de Noumea, signe en 1998, est le grand repere politique et institutionnel contemporain de la Nouvelle-Caledonie.',
-    wrongInsight: 'La bonne reponse etait l’accord de Noumea.',
+      "L'accord de Nouméa, signé en 1998, organise le cadre institutionnel contemporain de la Nouvelle-Calédonie. C'est le grand repère politique à connaître pour comprendre son statut actuel.",
+    wrongInsight: "Le grand accord de référence pour la Nouvelle-Calédonie est l'accord de Nouméa de 1998.",
   },
   {
     id: 8,
@@ -104,8 +104,8 @@ const questions: Question[] = [
     options: ['Traite de Tordesillas', 'Traite de Concordia', 'Traite d’Utrecht', 'Traite de Ryswick'],
     correctIndex: 1,
     correctInsight:
-      'Oui. Le traite de Concordia de 1648 est la reference historique du partage de l’ile entre la France et les Pays-Bas.',
-    wrongInsight: 'La bonne reponse etait le traite de Concordia.',
+      "Le traité de Concordia, signé en 1648, sert de référence historique pour le partage de l'île entre la France et les Pays-Bas. C'est un repère très classique sur Saint-Martin.",
+    wrongInsight: "Le texte historique à retenir ici est le traité de Concordia de 1648.",
   },
   {
     id: 9,
@@ -114,8 +114,8 @@ const questions: Question[] = [
     options: ['L’Espagne', 'Les Pays-Bas', 'La Suede', 'Le Royaume-Uni'],
     correctIndex: 2,
     correctInsight:
-      'Exact. Saint-Barthelemy a ete suedoise pendant pres d’un siecle. Le nom de Gustavia vient directement de cette periode.',
-    wrongInsight: 'La bonne reponse etait la Suede.',
+      "Saint-Barthélemy a été administrée par la Suède entre 1784 et 1878. Le nom de Gustavia rappelle directement cette période suédoise.",
+    wrongInsight: "Saint-Barthélemy a connu une période suédoise, ce qui explique notamment le nom de Gustavia.",
   },
   {
     id: 10,
@@ -124,8 +124,8 @@ const questions: Question[] = [
     options: ['2', '3', '4', '5'],
     correctIndex: 1,
     correctInsight:
-      'Oui. Wallis-et-Futuna reconnait trois royaumes coutumiers : Uvea, Alo et Sigave.',
-    wrongInsight: 'La bonne reponse etait 3 royaumes coutumiers.',
+      "Wallis-et-Futuna reconnaît trois royaumes coutumiers : Uvea, Alo et Sigave. C'est l'un des traits institutionnels les plus singuliers de ce territoire français.",
+    wrongInsight: "Wallis-et-Futuna se distingue par la reconnaissance de trois royaumes coutumiers : Uvea, Alo et Sigave.",
   },
   {
     id: 11,
@@ -134,8 +134,8 @@ const questions: Question[] = [
     options: ['3', '4', '5', '6'],
     correctIndex: 2,
     correctInsight:
-      'Exact. La Polynesie francaise est composee de 5 archipels : Societe, Tuamotu, Gambier, Marquises et Australes.',
-    wrongInsight: 'La bonne reponse etait 5 archipels.',
+      "La Polynésie française est composée de cinq archipels : Société, Tuamotu, Gambier, Marquises et Australes. Ce chiffre aide à comprendre l'immensité et la dispersion du territoire.",
+    wrongInsight: "On retient que la Polynésie française est organisée en cinq archipels.",
   },
   {
     id: 12,
@@ -149,8 +149,8 @@ const questions: Question[] = [
     ],
     correctIndex: 1,
     correctInsight:
-      'Oui. Mayotte possede l’un des plus grands lagons du monde, delimite par une barriere de corail de plus de 160 km.',
-    wrongInsight: 'La bonne reponse etait l’un des plus grands et des plus beaux lagons du monde.',
+      "Mayotte possède l'un des plus grands lagons du monde, protégé par une longue barrière de corail. C'est l'un des éléments naturels les plus célèbres et les plus impressionnants du territoire.",
+    wrongInsight: "Le lagon de Mayotte est surtout connu pour être l'un des plus grands et des plus remarquables du monde.",
   },
   {
     id: 13,
@@ -159,8 +159,8 @@ const questions: Question[] = [
     options: ['Amerique du Nord', 'Amerique du Sud', 'Asie du Sud-Est', 'Ocean Indien'],
     correctIndex: 0,
     correctInsight:
-      'Oui. Au large de Terre-Neuve, Saint-Pierre-et-Miquelon est la seule collectivite francaise situee en Amerique du Nord. C’est ce qui rend l’archipel si singulier.',
-    wrongInsight: 'La bonne reponse etait l’Amerique du Nord.',
+      "Situé au large de Terre-Neuve, Saint-Pierre-et-Miquelon constitue la seule collectivité française en Amérique du Nord. C'est ce décalage géographique qui rend l'archipel particulièrement marquant.",
+    wrongInsight: "Saint-Pierre-et-Miquelon se trouve bien en Amérique du Nord, au large du Canada.",
   },
   {
     id: 14,
@@ -169,8 +169,8 @@ const questions: Question[] = [
     options: ['Saint-Pierre et Langlade', 'Miquelon et Langlade', 'Saint-Pierre et Terre-Neuve', 'Miquelon et Uvea'],
     correctIndex: 1,
     correctInsight:
-      'Exact. Miquelon et Langlade forment aujourd’hui une meme grande ile reliee par un tombolo, un petit fun fact geographique tres visuel.',
-    wrongInsight: 'La bonne reponse etait Miquelon et Langlade.',
+      "Miquelon et Langlade forment aujourd'hui une même grande île reliée par un tombolo, ce qui en fait un fun fact géographique assez marquant. Saint-Pierre reste l'autre île principale de l'archipel.",
+    wrongInsight: "Le duo à retenir ici est Miquelon-Langlade, aujourd'hui relié par un tombolo.",
   },
 ]
 
@@ -272,6 +272,7 @@ export default function QuizFunFacts() {
   const isLastQuestion = currentIndex === questions.length - 1
   const currentQuestionAnswered = typeof currentAnswer === 'number'
   const totalAnswered = Object.values(answers).filter((value) => typeof value === 'number').length
+  const allAnswered = totalAnswered === questions.length
 
   const selectAnswer = useCallback((questionId: number, optionIndex: number) => {
     setAnswers((prev) => {
@@ -314,9 +315,11 @@ export default function QuizFunFacts() {
                 <span>Quitter</span>
               </Link>
 
-              <div className="text-xs font-medium uppercase tracking-[0.24em] text-primary/55">
-                {currentIndex + 1} / {questions.length}
-              </div>
+              {!allAnswered && (
+                <div className="text-xs font-medium uppercase tracking-[0.24em] text-primary/55">
+                  {currentIndex + 1} / {questions.length}
+                </div>
+              )}
             </div>
 
             <div
@@ -324,47 +327,62 @@ export default function QuizFunFacts() {
               data-reveal-children="strong"
               style={{ ['--reveal-duration' as string]: '700ms' }}
             >
-              <div className="flex min-h-0 flex-1 items-center justify-center py-1 md:py-2">
-                <div className="w-full max-w-4xl">
-                  <QuestionCard
-                    question={currentQuestion}
-                    questionNumber={currentIndex + 1}
-                    selected={currentAnswer}
-                    onSelect={(optionIndex) => selectAnswer(currentQuestion.id, optionIndex)}
-                  />
+              {allAnswered ? (
+                <div className="flex min-h-0 flex-1 items-center justify-center py-1 md:py-2">
+                  <div className="w-full max-w-2xl rounded-[32px] border border-primary/10 bg-white/88 px-6 py-8 text-center shadow-sm backdrop-blur sm:px-8">
+                    <span className="quiz-badge mb-3">Quiz terminé</span>
+                    <h1 className="font-heading text-3xl sm:text-5xl font-bold text-primary">
+                      Score final : {score} / {questions.length}
+                    </h1>
+                    <p className="mt-4 text-base sm:text-lg text-primary/80">
+                      Très bon tour d'horizon. Ce quiz vous laisse surtout avec des repères faciles à retenir, des images marquantes et quelques vrais fun facts sur les Outre-mer.
+                    </p>
+                    <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+                      <button className="btn-primary rounded-full px-6 py-2" onClick={resetQuiz}>
+                        Recommencer
+                      </button>
+                      <Link
+                        to="/quiz-outremer"
+                        className="inline-flex items-center justify-center rounded-full border border-primary/20 px-6 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/5"
+                      >
+                        Aller au quiz histoire & géographie
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <>
+                  <div className="flex min-h-0 flex-1 items-center justify-center py-1 md:py-2">
+                    <div className="w-full max-w-4xl">
+                      <QuestionCard
+                        question={currentQuestion}
+                        questionNumber={currentIndex + 1}
+                        selected={currentAnswer}
+                        onSelect={(optionIndex) => selectAnswer(currentQuestion.id, optionIndex)}
+                      />
+                    </div>
+                  </div>
 
-              <div className="mt-3 flex items-center justify-between gap-3">
-                <div className="text-sm text-primary/70">
-                  {isLastQuestion &&
-                    (totalAnswered === questions.length
-                      ? `Score final : ${score} / ${questions.length}`
-                      : `Encore ${questions.length - totalAnswered} question${questions.length - totalAnswered > 1 ? 's' : ''} à valider`)}
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    className="rounded-full border border-primary/15 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/5 disabled:cursor-not-allowed disabled:opacity-35"
-                    onClick={goToPrevious}
-                    disabled={isFirstQuestion}
-                  >
-                    Précédent
-                  </button>
-                  <button
-                    type="button"
-                    className="rounded-full border border-primary/15 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/5 disabled:cursor-not-allowed disabled:opacity-35"
-                    onClick={goToNext}
-                    disabled={isLastQuestion || !currentQuestionAnswered}
-                  >
-                    Suivante
-                  </button>
-                  <button className="btn-primary rounded-full px-6 py-2" onClick={resetQuiz}>
-                    Recommencer
-                  </button>
-                </div>
-              </div>
+                  <div className="mt-3 flex items-center justify-end gap-2">
+                    <button
+                      type="button"
+                      className="rounded-full border border-primary/15 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/5 disabled:cursor-not-allowed disabled:opacity-35"
+                      onClick={goToPrevious}
+                      disabled={isFirstQuestion}
+                    >
+                      Précédent
+                    </button>
+                    <button
+                      type="button"
+                      className="rounded-full border border-primary/15 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/5 disabled:cursor-not-allowed disabled:opacity-35"
+                      onClick={goToNext}
+                      disabled={isLastQuestion || !currentQuestionAnswered}
+                    >
+                      Suivante
+                    </button>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </section>

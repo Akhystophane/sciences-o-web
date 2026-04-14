@@ -57,28 +57,24 @@ const questions: Question[] = [
     type: 'matching',
     typeLabel: 'Association',
     prompt:
-      "Relie chaque territoire à l'année de l'abolition de l'esclavage.",
+      'Relie chaque territoire à sa grande zone géographique.',
     leftItems: [
-      'Martinique',
       'Guadeloupe',
       'Guyane',
       'La Réunion',
-      'Saint-Barthélemy',
-      'Saint-Martin',
-      'Mayotte',
     ],
-    rightItems: ['1846', '1847', '1848'],
-    correctPairs: { 0: 2, 1: 2, 2: 2, 3: 2, 4: 1, 5: 2, 6: 0 },
+    rightItems: ['Caraïbes', 'Amérique du Sud', 'Océan Indien', 'Océan Pacifique', 'Amérique du Nord'],
+    correctPairs: { 0: 0, 1: 1, 2: 2 },
     explanation:
-      "La plupart de ces territoires commémorent une abolition de 1848. Mayotte se distingue avec 1846, et Saint-Barthélemy avec 1847 sous administration suédoise.",
+      "Cette question pose trois grands repères très simples : la Guadeloupe appartient à l'espace caribéen, la Guyane est située sur le continent sud-américain et La Réunion se trouve dans l'océan Indien. Les autres propositions restent là pour obliger à vraiment distinguer les grandes zones.",
   },
   {
     id: 16,
     type: 'ordering',
     typeLabel: 'Mise en ordre',
-    prompt: 'Replace ces événements du plus ancien au plus récent.',
+    prompt: 'Replace ces grands repères historiques du plus ancien au plus récent.',
     items: [
-      { label: 'Traité de Concordia', detail: '1648' },
+      { label: "Abolition de l'esclavage dans plusieurs territoires ultramarins", detail: '1848' },
       {
         label:
           'Départementalisation de la Guadeloupe, de la Martinique, de la Guyane et de La Réunion',
@@ -88,25 +84,74 @@ const questions: Question[] = [
       { label: 'Mayotte devient département', detail: '2011' },
     ],
     explanation:
-      'Cette question mélange un repère frontalier, une grande réforme statutaire de 1946, le cadre institutionnel calédonien et la départementalisation tardive de Mayotte.',
+      "Ces quatre dates structurent une bonne partie des repères de base. L'abolition de l'esclavage en 1848 précède la départementalisation de 1946 ; l'accord de Nouméa ouvre ensuite un cadre institutionnel spécifique en 1998 ; enfin Mayotte devient département en 2011.",
   },
   {
     id: 17,
     type: 'mcq',
     typeLabel: 'QCM',
-    prompt: 'Parmi ces propositions, laquelle est correcte ?',
+    prompt: "Quel territoire ultramarin français se trouve en Amérique du Sud ?",
     options: [
-      'La Guadeloupe a été départementalisée avant la Martinique',
-      'La Guyane a été départementalisée après La Réunion',
-      'Guadeloupe, Martinique, Guyane et La Réunion ont été départementalisées la même année',
-      'Mayotte a été départementalisée avant la Guyane',
+      'La Guadeloupe',
+      'La Guyane',
+      'La Réunion',
+      'Saint-Barthélemy',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     explanation:
-      'La Guadeloupe, la Martinique, la Guyane et La Réunion ont toutes été départementalisées par la loi du 19 mars 1946. Mayotte est devenue département beaucoup plus tard.',
+      "La Guyane est un cas très particulier : ce n'est pas une île, mais un territoire continental situé entre le Suriname et le Brésil. C'est aussi le plus vaste territoire ultramarin français.",
   },
   {
     id: 18,
+    type: 'multi-select',
+    typeLabel: 'Multi-sélection',
+    prompt: "Parmi ces territoires, lesquels se situent dans l'océan Indien ?",
+    options: [
+      'La Réunion',
+      'Mayotte',
+      'La Guadeloupe',
+      'La Martinique',
+      'La Nouvelle-Calédonie',
+      'Saint-Martin',
+    ],
+    correctIndices: [0, 1],
+    explanation:
+      "La Réunion et Mayotte sont les deux grands territoires ultramarins français de l'océan Indien. La Guadeloupe, la Martinique et Saint-Martin relèvent de l'espace caribéen, tandis que la Nouvelle-Calédonie est dans le Pacifique.",
+  },
+  {
+    id: 19,
+    type: 'mcq',
+    typeLabel: 'QCM',
+    prompt: "Quel territoire français d'outre-mer est partagé avec les Pays-Bas ?",
+    options: ['Saint-Barthélemy', 'Saint-Martin', 'La Guadeloupe', 'La Réunion'],
+    correctIndex: 1,
+    explanation:
+      "Saint-Martin est divisée entre une partie française et une partie néerlandaise. C'est l'un des exemples les plus connus d'île partagée dans l'espace caribéen français.",
+  },
+  {
+    id: 20,
+    type: 'matching',
+    typeLabel: 'Association',
+    prompt: 'Relie chaque territoire à son chef-lieu.',
+    leftItems: ['Guadeloupe', 'Martinique', 'Guyane', 'La Réunion'],
+    rightItems: ['Basse-Terre', 'Fort-de-France', 'Cayenne', 'Saint-Denis'],
+    correctPairs: { 0: 0, 1: 1, 2: 2, 3: 3 },
+    explanation:
+      "Ce sont des repères administratifs utiles à retenir. Basse-Terre est le chef-lieu de la Guadeloupe, Fort-de-France celui de la Martinique, Cayenne celui de la Guyane et Saint-Denis celui de La Réunion.",
+  },
+  {
+    id: 21,
+    type: 'mcq',
+    typeLabel: 'QCM',
+    prompt:
+      'Quel territoire ultramarin donne à la France sa plus grande zone économique exclusive (ZEE) ?',
+    options: ['La Réunion', 'La Nouvelle-Calédonie', 'La Polynésie française', 'La Guyane'],
+    correctIndex: 2,
+    explanation:
+      "La Polynésie française est décisive pour la présence maritime française dans le Pacifique. À elle seule, elle donne à la France une ZEE immense, souvent estimée autour de 5,5 millions de km².",
+  },
+  {
+    id: 22,
     type: 'ordering',
     typeLabel: 'Classement',
     prompt: 'Classe ces territoires du plus grand au plus petit par superficie.',
@@ -117,76 +162,34 @@ const questions: Question[] = [
       { label: 'Saint-Barthélemy' },
     ],
     explanation:
-      'La Guyane est de très loin la plus vaste. Saint-Barthélemy est la plus petite de cette liste.',
-  },
-  {
-    id: 19,
-    type: 'mcq',
-    typeLabel: 'QCM',
-    prompt:
-      'Quel territoire ultramarin donne à la France sa plus grande zone économique exclusive (ZEE) ?',
-    options: ['La Réunion', 'La Nouvelle-Calédonie', 'La Polynésie française', 'La Guyane'],
-    correctIndex: 2,
-    explanation:
-      "La Polynésie française donne à la France sa plus grande zone économique exclusive, d'environ 5,5 millions de km².",
-  },
-  {
-    id: 20,
-    type: 'multi-select',
-    typeLabel: 'Multi-sélection',
-    prompt: 'Parmi ces territoires, lesquels sont des archipels ?',
-    options: [
-      'Guadeloupe',
-      'Martinique',
-      'Nouvelle-Calédonie',
-      'Wallis-et-Futuna',
-      'Guyane',
-      'Polynésie française',
-    ],
-    correctIndices: [0, 2, 3, 5],
-    explanation:
-      'La Martinique est une île, la Guyane est continentale, tandis que les autres propositions correctes correspondent bien à des ensembles insulaires.',
-  },
-  {
-    id: 21,
-    type: 'mcq',
-    typeLabel: 'QCM / Intrus',
-    prompt: "Lequel de ces territoires n'a pas un créole comme langue locale structurante ?",
-    options: ['Martinique', 'Guadeloupe', 'La Réunion', 'Wallis-et-Futuna'],
-    correctIndex: 3,
-    explanation:
-      'À Wallis-et-Futuna, les langues locales principales sont le wallisien et le futunien.',
-  },
-  {
-    id: 22,
-    type: 'matching',
-    typeLabel: 'Association',
-    prompt: 'Relie chaque territoire à son statut institutionnel.',
-    leftItems: ['Guyane', 'Saint-Martin', 'Saint-Barthélemy', 'Nouvelle-Calédonie'],
-    rightItems: ['DROM', 'COM', 'Collectivité sui generis'],
-    correctPairs: { 0: 0, 1: 1, 2: 1, 3: 2 },
-    explanation:
-      'La Nouvelle-Calédonie a un statut à part, dit sui generis. Saint-Martin et Saint-Barthélemy sont des COM, tandis que la Guyane est un DROM.',
+      "La Guyane est de très loin la plus vaste, avec une superficie sans commune mesure avec les territoires insulaires. Viennent ensuite la Guadeloupe, puis la Martinique ; Saint-Barthélemy est très petite à l'échelle française.",
   },
   {
     id: 23,
-    type: 'mcq',
-    typeLabel: 'QCM',
-    prompt: "Quel territoire français d'outre-mer est partagé avec les Pays-Bas ?",
-    options: ['Saint-Barthélemy', 'Saint-Martin', 'La Guadeloupe', 'La Nouvelle-Calédonie'],
-    correctIndex: 1,
-    explanation:
-      'Saint-Martin est partagée entre une partie française et une partie néerlandaise, dans le cadre historique du traité de Concordia.',
-  },
-  {
-    id: 24,
     type: 'mcq',
     typeLabel: 'QCM',
     prompt: 'Quel territoire ultramarin français a connu une période suédoise ?',
     options: ['La Martinique', 'Saint-Martin', 'Saint-Barthélemy', 'La Réunion'],
     correctIndex: 2,
     explanation:
-      'Saint-Barthélemy a été administrée par la Suède entre 1784 et 1878.',
+      "Saint-Barthélemy a été administrée par la Suède entre 1784 et 1878. Le nom de Gustavia, sa principale ville, vient directement de cette période suédoise.",
+  },
+  {
+    id: 24,
+    type: 'multi-select',
+    typeLabel: 'Multi-sélection',
+    prompt: 'Parmi ces territoires, lesquels sont des archipels ?',
+    options: [
+      'Guadeloupe',
+      'Martinique',
+      'Wallis-et-Futuna',
+      'Polynésie française',
+      'Guyane',
+      'Saint-Pierre-et-Miquelon',
+    ],
+    correctIndices: [0, 2, 3, 5],
+    explanation:
+      "La Guadeloupe, Wallis-et-Futuna, la Polynésie française et Saint-Pierre-et-Miquelon sont bien des ensembles composés de plusieurs îles. La Martinique est en revanche une île unique, et la Guyane n'est pas insulaire puisqu'elle se situe sur le continent sud-américain.",
   },
 ]
 
@@ -429,7 +432,7 @@ function MultiSelectCard({
         </span>
       </div>
       <p className="mt-1 text-sm text-gray-500">
-        Glissez les bonnes réponses dans votre sélection, ou touchez-les pour les déplacer.
+        Glissez les bonnes réponses dans votre sélection, ou cliquez simplement sur une réponse pour l'ajouter et la retirer.
       </p>
 
       <div className="mt-3 grid gap-3 lg:grid-cols-2">
@@ -598,7 +601,8 @@ function MatchingCard({
           <div>
             <h3 className="font-semibold text-primary">Étiquettes à glisser</h3>
             <p className="text-sm text-gray-500">
-              Glissez une réponse sur chaque territoire, ou touchez une étiquette puis une case.
+              Vous pouvez glisser une réponse sur chaque territoire, ou faire plus simple :
+              cliquez sur une étiquette, puis cliquez sur la case du territoire.
             </p>
           </div>
           {allowsReuse && <span className="text-xs text-gray-500">Certaines réponses se réutilisent.</span>}
@@ -717,7 +721,7 @@ function MatchingCard({
                   </>
                 ) : (
                   <span className="text-sm text-gray-400">
-                    {selectedChoice !== null ? 'Touchez pour déposer' : 'Déposez ici'}
+                    {selectedChoice !== null ? 'Cliquez ici pour déposer' : 'Déposez ici ou cliquez après avoir choisi'}
                   </span>
                 )}
                   </div>
@@ -824,11 +828,20 @@ function OrderingCard({
 
       {!validated && (
         <div className="mt-3 rounded-2xl border border-primary/15 bg-primary/[0.03] px-4 py-3 text-sm text-gray-600">
-          Glissez les cartes pour les remettre dans l'ordre. Si vous êtes sur mobile, les flèches restent disponibles en secours.
+          Glissez les cartes pour les remettre dans l'ordre.
+          Si ce n'est pas pratique sur votre écran, utilisez simplement les boutons
+          « Monter d'une place » et « Descendre d'une place ».
         </div>
       )}
 
-      <div className="mt-3 space-y-2">
+      <div className="mt-3 flex items-start gap-3">
+        <div className="hidden w-28 shrink-0 rounded-2xl border border-primary/15 bg-white/80 px-3 py-4 text-center text-xs font-semibold uppercase tracking-[0.18em] text-primary/60 sm:flex sm:flex-col sm:items-center sm:justify-between">
+          <span>Plus ancien</span>
+          <span className="text-primary/30">↓</span>
+          <span>Plus récent</span>
+        </div>
+
+        <div className="flex-1 space-y-2">
         {order.map((itemIdx, pos) => {
           const item = question.items[itemIdx]
           const isCorrectPos = validated && itemIdx === pos
@@ -884,7 +897,7 @@ function OrderingCard({
                     className="rounded-full border border-gray-200 px-2 py-1 text-xs font-semibold text-gray-600 hover:border-primary/30 hover:bg-primary/5 disabled:opacity-25 transition-colors"
                     aria-label="Monter"
                   >
-                    Monter
+                    Monter d'une place
                   </button>
                   <button
                     onClick={() => moveDown(pos)}
@@ -892,7 +905,7 @@ function OrderingCard({
                     className="rounded-full border border-gray-200 px-2 py-1 text-xs font-semibold text-gray-600 hover:border-primary/30 hover:bg-primary/5 disabled:opacity-25 transition-colors"
                     aria-label="Descendre"
                   >
-                    Descendre
+                    Descendre d'une place
                   </button>
                 </div>
               )}
@@ -902,6 +915,7 @@ function OrderingCard({
             </div>
           )
         })}
+        </div>
       </div>
 
       {validated && !isCorrectOrder && (
@@ -962,6 +976,7 @@ export default function QuizTransversal() {
   const isLastQuestion = currentIndex === questions.length - 1
   const totalAnswered = Object.keys(results).length
   const score = Object.values(results).filter(Boolean).length
+  const allAnswered = totalAnswered === questions.length
   const currentQuestionAnswered = questions[currentIndex].id in results
 
   const goToQuestion = (index: number) => {
@@ -998,9 +1013,11 @@ export default function QuizTransversal() {
                 <span>Quitter</span>
               </Link>
 
-              <div className="text-xs font-medium tracking-[0.24em] text-primary/55 uppercase">
-                {currentIndex + 1} / {questions.length}
-              </div>
+              {!allAnswered && (
+                <div className="text-xs font-medium tracking-[0.24em] text-primary/55 uppercase">
+                  {currentIndex + 1} / {questions.length}
+                </div>
+              )}
             </div>
 
             <div
@@ -1008,76 +1025,91 @@ export default function QuizTransversal() {
               data-reveal-children="strong"
               style={{ ['--reveal-duration' as string]: '700ms' }}
             >
-              <div className="flex min-h-0 flex-1 items-center justify-center py-1 md:py-2">
-                {questions.map((q, idx) => {
-                  const num = idx + 1
-                  const onAnswer = (c: boolean) => handleAnswer(q.id, c)
-                  const isVisible = idx === currentIndex
-                  let content
-
-                  switch (q.type) {
-                    case 'mcq':
-                      content = <MCQCard key={q.id} question={q} questionNumber={num} onAnswer={onAnswer} />
-                      break
-                    case 'multi-select':
-                      content = (
-                        <MultiSelectCard key={q.id} question={q} questionNumber={num} onAnswer={onAnswer} />
-                      )
-                      break
-                    case 'matching':
-                      content = (
-                        <MatchingCard key={q.id} question={q} questionNumber={num} onAnswer={onAnswer} />
-                      )
-                      break
-                    case 'ordering':
-                      content = (
-                        <OrderingCard key={q.id} question={q} questionNumber={num} onAnswer={onAnswer} />
-                      )
-                      break
-                  }
-
-                  return (
-                    <div
-                      key={q.id}
-                      className={`w-full max-w-4xl ${isVisible ? 'block' : 'hidden'}`}
-                      aria-hidden={!isVisible}
-                    >
-                      {content}
+              {allAnswered ? (
+                <div className="flex min-h-0 flex-1 items-center justify-center py-1 md:py-2">
+                  <div className="w-full max-w-2xl rounded-[32px] border border-primary/10 bg-white/88 px-6 py-8 text-center shadow-sm backdrop-blur sm:px-8">
+                    <span className="quiz-badge mb-3">Quiz terminé</span>
+                    <h1 className="font-heading text-3xl sm:text-5xl font-bold text-primary">
+                      Score final : {score} / {questions.length}
+                    </h1>
+                    <p className="mt-4 text-base sm:text-lg text-primary/80">
+                      Beau parcours. Ce quiz vous a donné des repères plus structurés sur l'histoire, la géographie et les grands cadres institutionnels des territoires ultramarins.
+                    </p>
+                    <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+                      <button className="btn-primary rounded-full px-6 py-2" onClick={reset}>
+                        Recommencer
+                      </button>
+                      <Link
+                        to="/quiz-fun-facts"
+                        className="inline-flex items-center justify-center rounded-full border border-primary/20 px-6 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/5"
+                      >
+                        Aller au quiz fun facts
+                      </Link>
                     </div>
-                  )
-                })}
-              </div>
-
-              <div className="mt-3 flex items-center justify-between gap-3">
-                <div className="text-sm text-primary/70">
-                  {isLastQuestion &&
-                    (totalAnswered === questions.length
-                      ? `Score final : ${score} / ${questions.length}`
-                      : `Encore ${questions.length - totalAnswered} question${questions.length - totalAnswered > 1 ? 's' : ''} à valider`)}
+                  </div>
                 </div>
+              ) : (
+                <>
+                  <div className="flex min-h-0 flex-1 items-center justify-center py-1 md:py-2">
+                    {questions.map((q, idx) => {
+                      const num = idx + 1
+                      const onAnswer = (c: boolean) => handleAnswer(q.id, c)
+                      const isVisible = idx === currentIndex
+                      let content
 
-                <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    className="rounded-full border border-primary/15 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/5 disabled:cursor-not-allowed disabled:opacity-35"
-                    onClick={goToPrevious}
-                    disabled={isFirstQuestion}
-                  >
-                    Précédent
-                  </button>
-                  <button
-                    type="button"
-                    className="rounded-full border border-primary/15 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/5 disabled:cursor-not-allowed disabled:opacity-35"
-                    onClick={goToNext}
-                    disabled={isLastQuestion || !currentQuestionAnswered}
-                  >
-                    Suivante
-                  </button>
-                  <button className="btn-primary px-6 py-2 rounded-full" onClick={reset}>
-                    Recommencer
-                  </button>
-                </div>
-              </div>
+                      switch (q.type) {
+                        case 'mcq':
+                          content = <MCQCard key={q.id} question={q} questionNumber={num} onAnswer={onAnswer} />
+                          break
+                        case 'multi-select':
+                          content = (
+                            <MultiSelectCard key={q.id} question={q} questionNumber={num} onAnswer={onAnswer} />
+                          )
+                          break
+                        case 'matching':
+                          content = (
+                            <MatchingCard key={q.id} question={q} questionNumber={num} onAnswer={onAnswer} />
+                          )
+                          break
+                        case 'ordering':
+                          content = (
+                            <OrderingCard key={q.id} question={q} questionNumber={num} onAnswer={onAnswer} />
+                          )
+                          break
+                      }
+
+                      return (
+                        <div
+                          key={q.id}
+                          className={`w-full max-w-4xl ${isVisible ? 'block' : 'hidden'}`}
+                          aria-hidden={!isVisible}
+                        >
+                          {content}
+                        </div>
+                      )
+                    })}
+                  </div>
+
+                  <div className="mt-3 flex items-center justify-end gap-2">
+                    <button
+                      type="button"
+                      className="rounded-full border border-primary/15 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/5 disabled:cursor-not-allowed disabled:opacity-35"
+                      onClick={goToPrevious}
+                      disabled={isFirstQuestion}
+                    >
+                      Précédent
+                    </button>
+                    <button
+                      type="button"
+                      className="rounded-full border border-primary/15 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/5 disabled:cursor-not-allowed disabled:opacity-35"
+                      onClick={goToNext}
+                      disabled={isLastQuestion || !currentQuestionAnswered}
+                    >
+                      Suivante
+                    </button>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </section>
