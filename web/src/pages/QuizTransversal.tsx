@@ -57,7 +57,7 @@ const questions: Question[] = [
     type: 'matching',
     typeLabel: 'Association',
     prompt:
-      "Relie chaque territoire à sa date officielle de commémoration de l'abolition de l'esclavage.",
+      "Relie chaque territoire à l'année de l'abolition de l'esclavage.",
     leftItems: [
       'Martinique',
       'Guadeloupe',
@@ -67,10 +67,10 @@ const questions: Question[] = [
       'Saint-Martin',
       'Mayotte',
     ],
-    rightItems: ['27 avril', '22 mai', '27 mai', '10 juin', '9 octobre', '20 décembre'],
-    correctPairs: { 0: 1, 1: 2, 2: 3, 3: 5, 4: 4, 5: 2, 6: 0 },
+    rightItems: ['1846', '1847', '1848'],
+    correctPairs: { 0: 2, 1: 2, 2: 2, 3: 2, 4: 1, 5: 2, 6: 0 },
     explanation:
-      'Ces dates sont fixées dans le Code du travail pour les territoires concernés.',
+      "La plupart de ces territoires commémorent une abolition de 1848. Mayotte se distingue avec 1846, et Saint-Barthélemy avec 1847 sous administration suédoise.",
   },
   {
     id: 16,
@@ -987,7 +987,7 @@ export default function QuizTransversal() {
     <div className="h-[100dvh] overflow-hidden bg-white text-gray-800">
       <main className="h-full">
         <section className="relative h-full overflow-hidden bg-gradient-to-br from-white via-blue-50/30 to-accent/5">
-          <div className="container-page relative z-10 flex h-full flex-col py-4 md:py-5">
+          <div className="container-page relative z-10 flex h-full flex-col pt-4 pb-10 md:pt-5 md:pb-12">
             <div className="mb-3 flex items-center justify-between gap-4" data-reveal>
               <Link
                 to="/"

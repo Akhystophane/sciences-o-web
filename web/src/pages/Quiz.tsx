@@ -193,7 +193,7 @@ export default function Quiz() {
                 <span className="text-sm">Retour à l'accueil</span>
               </Link>
             </div>
-            <div className="mx-auto hero-content text-center" data-reveal-children="strong" style={{ ['--reveal-duration' as any]: '700ms' }}>
+            <div className="mx-auto hero-content text-center" data-reveal-children="strong" style={{ ['--reveal-duration' as string]: '700ms' }}>
               <span className="quiz-badge mb-3">Thème · Enjeux Environnementaux et Écologiques des Outre-mer</span>
               <h1 className="font-heading text-4xl sm:text-6xl font-bold text-primary mb-4">Quiz Climat</h1>
               <p className="text-base sm:text-lg text-primary/80 mb-6 max-w-3xl mx-auto">
@@ -239,18 +239,18 @@ export default function Quiz() {
                       {isAnswered && (
                         <div className={`mt-4 grid gap-2 rounded-lg border px-4 py-3 text-sm ${selected === q.correctIndex ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`}>
                           {selected === q.correctIndex ? (
-                          <>
-                            <div className="text-green-700 font-semibold">
-                              ✅ Bonne réponse : {String.fromCharCode(97 + q.correctIndex)}) {q.options[q.correctIndex]}
-                            </div>
-                            <div className="text-gray-700">{q.correctInsight}</div>
-                          </>
-                        ) : (
-                          <>
-                            <div className="text-red-700 font-semibold">❌ {q.wrongInsight}</div>
-                            <div className="text-gray-700">Bonne réponse : {String.fromCharCode(97 + q.correctIndex)}) {q.options[q.correctIndex]}</div>
-                          </>
-                        )}
+                            <>
+                              <div className="text-green-700 font-semibold">
+                                ✅ Bonne réponse : {String.fromCharCode(97 + q.correctIndex)}) {q.options[q.correctIndex]}
+                              </div>
+                              <div className="text-gray-700">{q.correctInsight}</div>
+                            </>
+                          ) : (
+                            <>
+                              <div className="text-red-700 font-semibold">❌ {q.wrongInsight}</div>
+                              <div className="text-gray-700">Bonne réponse : {String.fromCharCode(97 + q.correctIndex)}) {q.options[q.correctIndex]}</div>
+                            </>
+                          )}
                         </div>
                       )}
                     </article>
@@ -275,5 +275,3 @@ export default function Quiz() {
     </div>
   )
 }
-
-

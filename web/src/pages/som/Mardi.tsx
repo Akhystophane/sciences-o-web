@@ -21,7 +21,9 @@ export default function Mardi() {
       description: 'Dispositif ludique de sensibilisation autour des représentations des Outre-mer. À tester en solo ou à plusieurs !',
       status: 'libre' as const,
       actionUrl: '/quiz-outremer',
-      actionLabel: 'Faire le quizz'
+      actionLabel: 'Quiz interactif',
+      secondaryActionUrl: '/quiz-fun-facts',
+      secondaryActionLabel: 'Quiz fun facts'
     },
     {
       title: 'Atelier culinaire, masterclass rhum & marché culinaire',

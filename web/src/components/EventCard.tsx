@@ -11,6 +11,8 @@ interface EventCardProps {
   registrationUrl?: string
   actionUrl?: string
   actionLabel?: string
+  secondaryActionUrl?: string
+  secondaryActionLabel?: string
 }
 
 export default function EventCard({
@@ -21,10 +23,39 @@ export default function EventCard({
   status,
   registrationUrl,
   actionUrl,
-  actionLabel
+  actionLabel,
+  secondaryActionUrl,
+  secondaryActionLabel
 }: EventCardProps) {
   const navigate = useNavigate()
   const isExternalAction = actionUrl?.startsWith('http')
+  const isSecondaryExternalAction = secondaryActionUrl?.startsWith('http')
+
+  function renderAction(actionTarget: string, label: string, external?: boolean) {
+    if (external) {
+      return (
+        <a
+          href={actionTarget}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full border border-primary/20 px-4 py-2 text-sm font-semibold text-primary transition-all duration-300 hover:border-primary/35 hover:bg-primary/5"
+        >
+          {label}
+          <ExternalLink className="w-4 h-4" />
+        </a>
+      )
+    }
+
+    return (
+      <button
+        type="button"
+        onClick={() => navigate(actionTarget)}
+        className="inline-flex items-center gap-2 rounded-full border border-primary/20 px-4 py-2 text-sm font-semibold text-primary transition-all duration-300 hover:border-primary/35 hover:bg-primary/5"
+      >
+        {label}
+      </button>
+    )
+  }
 
   return (
     <div className="group relative bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-primary/15 transition-all duration-300 hover:shadow-xl hover:bg-white/95 hover:border-primary/25 hover:-translate-y-1">
@@ -60,26 +91,13 @@ export default function EventCard({
         </a>
       )}
 
-      {actionUrl && actionLabel && (
-        isExternalAction ? (
-          <a
-            href={actionUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-primary/20 px-4 py-2 text-sm font-semibold text-primary transition-all duration-300 hover:border-primary/35 hover:bg-primary/5"
-          >
-            {actionLabel}
-            <ExternalLink className="w-4 h-4" />
-          </a>
-        ) : (
-          <button
-            type="button"
-            onClick={() => navigate(actionUrl)}
-            className="inline-flex items-center gap-2 rounded-full border border-primary/20 px-4 py-2 text-sm font-semibold text-primary transition-all duration-300 hover:border-primary/35 hover:bg-primary/5"
-          >
-            {actionLabel}
-          </button>
-        )
+      {((actionUrl && actionLabel) || (secondaryActionUrl && secondaryActionLabel)) && (
+        <div className="flex flex-wrap gap-2">
+          {actionUrl && actionLabel && renderAction(actionUrl, actionLabel, isExternalAction)}
+          {secondaryActionUrl &&
+            secondaryActionLabel &&
+            renderAction(secondaryActionUrl, secondaryActionLabel, isSecondaryExternalAction)}
+        </div>
       )}
     </div>
   )
